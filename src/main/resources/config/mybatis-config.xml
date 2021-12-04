@@ -1,0 +1,30 @@
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+ <configuration>
+ 	<settings>
+ 		<setting name="cacheEnabled" value="true"></setting>
+ 		<setting name="autoMappingUnknownColumnBehavior" value="WARNING"></setting>
+ 		<setting name="lazyLoadingEnabled" value="true"></setting>
+ 		<setting name="aggressiveLazyLoading" value="true"></setting>
+ 		<setting name="multipleResultSetsEnabled" value="true"></setting>
+ 		<setting name="useColumnLabel" value="true"></setting>
+ 		<setting name="useGeneratedKeys" value="false"></setting>
+ 		<setting name="autoMappingBehavior" value="PARTIAL"></setting>
+ 		<setting name="defaultExecutorType" value="SIMPLE"></setting>
+ 		<setting name="mapUnderscoreToCamelCase" value="true"></setting>
+ 		<!-- <setting name="localCacheScope" value="true"></setting>-->
+ 		<setting name="jdbcTypeForNull" value="NULL"></setting>
+ 	</settings>
+ 	<plugins>
+ 		<plugin interceptor="com.github.pagehelper.PageInterceptor">
+ 			<property name="helperDialect" value="mysql"/>
+ 			<property name="offsetAsPageNum" value="false"/>
+ 			<property name="rowBundsWithCount" value="false"/>
+ 			<property name="pageSizeZero" value="true"/>
+ 			<property name="reasonable" value="false"/>
+ 			<property name="supportMethodsArguments" value="false"/>
+ 			<property name="returnPageInfo" value="none"/>
+ 		</plugin>
+ 	</plugins>
+ </configuration>
